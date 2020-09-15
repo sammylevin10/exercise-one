@@ -8,7 +8,6 @@ function App() {
   //Returns JSX
   return (
     <div className="App">
-      <h1>Exercise One</h1>
       <ArticleListing />
     </div>
   );
