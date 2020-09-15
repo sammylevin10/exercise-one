@@ -5,9 +5,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
+  //Render this \/
   <React.StrictMode>
+    {/* This is being imported from inside App.js */}
     <App />
   </React.StrictMode>,
+  //Inside of this \/
   document.getElementById('root')
 );
 
