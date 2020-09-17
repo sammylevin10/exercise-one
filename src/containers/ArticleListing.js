@@ -12,6 +12,7 @@ function ArticleListing() {
       <header>
         <h1>Articles</h1>
       </header>
+
       {/* Data.map(element, iterator) is a function that acts like an enhanced for loop. It parses through each element in the iterable type */}
       {/* For every article, generate article card */}
       {Data.map((article, i) => (

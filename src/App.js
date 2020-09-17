@@ -1,14 +1,24 @@
 import React from "react";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
-
 import ArticleListing from "./containers/ArticleListing";
+import Article from "./containers/Article";
 
 function App() {
   //Returns JSX
+  //JSX is a way to write HTML inside js files as part of a React App
   return (
     <div className="App">
-      <ArticleListing />
+      <Router>
+        <Switch>
+          <Route path="/article/:id">
+            <Article />
+          </Route>
+          <Route path="/">
+            <ArticleListing />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

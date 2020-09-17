@@ -1,3 +1,54 @@
 /* Affects anything with classname App */
 .App {
+  margin: 0 auto;
+  max-width: 1080px;
 }
+
+.App h1 {
+  font-size: 70px;
+}
+
+.ArticleCard {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  padding: 25px 30px;
+  margin-bottom: 20px;
+}
+
+.ArticleCardImage {
+  flex-basis: 30%;
+  padding-right: 30px;
+}
+
+.ArticleCardImage img {
+  height: auto;
+  width: 100%;
+}
+
+.ArticleCardText {
+  flex-basis: 70%;
+}
+
+/* 
+CSS FORMATTING
+Classes: .class
+IDs: #id // NEVER USE THESE IN CSS. This is intended for one-time use cases, so add a class instead
+HTML Element: h1, h2, p, main...
+
+DISPLAY VALUES
+block // <div>
+inline // <a>
+inline-block
+none
+flex
+grid
+
+CSS BOX MODEL
+padding - inside of the container
+margin - outside of the container
+border - lines up with the container
+
+Padding/Margin: top right bottom left;
+
+*/
