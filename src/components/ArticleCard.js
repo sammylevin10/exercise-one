@@ -2,9 +2,39 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 // The ArticleCard is receiving the articleData that is passsed to it in ArticleListing.js
 function ArticleCard({ articleData }) {
-  console.log(articleData);
+  const date = new Date(articleData.publishedDate);
+  const dayOfWeek = date.getDay();
+  const month = date.getMonth();
+  const calendarDate = date.getDate();
+  const year = date.getFullYear();
+
   return (
     <div className="ArticleCard">
       <div className="ArticleCardImage">
@@ -12,7 +42,9 @@ function ArticleCard({ articleData }) {
       </div>
       <div className="ArticleCardText">
         <h2>{articleData.title}</h2>
-        <p>{articleData.publishedDate}</p>
+        {/* Form a date string using a string literal that references both a Date() object and two const arrays that we defined above. */}
+        {/* The Date() object stores information as array indeces because storing them as English strings would be language biased */}
+        <p>{`${days[dayOfWeek]}, ${months[month]} ${calendarDate} ${year}`}</p>
         <p>{articleData.blurb}</p>
         <Link to={`article/${articleData.id}`}>Read More</Link>
       </div>
