@@ -8,7 +8,7 @@ function ArticleListing() {
   // props = properties = sends data through the flow of the components
   return (
     //   Section and header tags are best practices for code readability
-    <main>
+    <main className="ArticleListing">
       <header>
         <h1>Articles</h1>
       </header>
